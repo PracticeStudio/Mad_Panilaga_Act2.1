@@ -1,142 +1,123 @@
 package com.mad_panilaga_act21;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-
     private TextView resultTextView;
-    private String currentInput = "";
-    private String currentOperator = "";
-    private double result = 0.0;
+    private String currentInput = ""; // Store the current input
+    private double firstOperand = 0; // Store the first operand
+    private String operator = ""; // Store the current operator
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activitiy_main); // Corrected the layout resource name
+        setContentView(R.layout.activity_main);
 
         resultTextView = findViewById(R.id.result);
-
-        // Initialize buttons
-        Button buttonZero = findViewById(R.id.button_zero);
-        Button buttonOne = findViewById(R.id.button_one);
-        Button buttonTwo = findViewById(R.id.button_two);
-        Button buttonThree = findViewById(R.id.button_three);
-        Button buttonFour = findViewById(R.id.button_four);
-        Button buttonFive = findViewById(R.id.button_five);
-        Button buttonSix = findViewById(R.id.button_six);
-        Button buttonSeven = findViewById(R.id.button_seven);
-        Button buttonEight = findViewById(R.id.button_eight);
-        Button buttonNine = findViewById(R.id.button_nine);
-
-        Button buttonAddition = findViewById(R.id.button_addition);
-        Button buttonSubtraction = findViewById(R.id.button_minus); // Corrected button ID
-        Button buttonMultiplication = findViewById(R.id.button_multiply); // Corrected button ID
-        Button buttonDivision = findViewById(R.id.button_divide); // Corrected button ID
-
-        Button buttonEquals = findViewById(R.id.button_equals);
-        Button buttonClear = findViewById(R.id.button_ac);
-        Button buttonDot = findViewById(R.id.button_dot);
-
-        findViewById(R.id.button_openbracket);
-        findViewById(R.id.button_closebracket);
-        findViewById(R.id.button_mod);
-        findViewById(R.id.button_negative);
-        findViewById(R.id.button_squareroot);
-        findViewById(R.id.button_powerofn);
-
-        findViewById(R.id.button_square);
-        findViewById(R.id.button_logarithmic);
-        findViewById(R.id.button_exponents);
-        findViewById(R.id.button_reciprocal);
-
-        findViewById(R.id.button_rootsofn);
-
-        buttonZero.setOnClickListener(v -> appendToResult("0"));
-
-        buttonOne.setOnClickListener(v -> appendToResult("1"));
-
-        buttonTwo.setOnClickListener(v -> appendToResult("2"));
-
-        buttonThree.setOnClickListener(v -> appendToResult("3"));
-
-        buttonFour.setOnClickListener(v -> appendToResult("4"));
-
-        buttonFive.setOnClickListener(v -> appendToResult("5"));
-
-        buttonSix.setOnClickListener(v -> appendToResult("6"));
-
-        buttonSeven.setOnClickListener(v -> appendToResult("7"));
-
-        buttonEight.setOnClickListener(v -> appendToResult("8"));
-
-        buttonNine.setOnClickListener(v -> appendToResult("9"));
-
-        buttonAddition.setOnClickListener(v -> handleOperator("+"));
-
-        buttonSubtraction.setOnClickListener(v -> handleOperator("-"));
-
-        buttonMultiplication.setOnClickListener(v -> handleOperator("*"));
-
-        buttonDivision.setOnClickListener(v -> handleOperator("/"));
-
-        buttonEquals.setOnClickListener(v -> calculateResult());
-
-        buttonClear.setOnClickListener(v -> clearInput());
-
-        buttonDot.setOnClickListener(v -> appendToResult("."));
-
+        initializeButtons();
     }
 
-    private void appendToResult(String text) {
-        String currentText = resultTextView.getText().toString();
-        resultTextView.setText(currentText + text);
-    }
+    private void initializeButtons() {
+        // Initialize buttons by their IDs
+        Button[] buttons = {
+                findViewById(R.id.button_O),
+                findViewById(R.id.button_openbracket),
+                findViewById(R.id.button_closebracket),
+                findViewById(R.id.button_divide),
+                findViewById(R.id.button_seven),
+                findViewById(R.id.button_eight),
+                findViewById(R.id.button_nine),
+                findViewById(R.id.button_multiply),
+                findViewById(R.id.button_four),
+                findViewById(R.id.button_five),
+                findViewById(R.id.button_six),
+                findViewById(R.id.button_addition),
+                findViewById(R.id.button_one),
+                findViewById(R.id.button_two),
+                findViewById(R.id.button_three),
+                findViewById(R.id.button_minus),
+                findViewById(R.id.button_ac),
+                findViewById(R.id.button_zero),
+                findViewById(R.id.button_dot),
+                findViewById(R.id.button_equals),
+                findViewById(R.id.button_mod),
+                findViewById(R.id.button_negative),
+                findViewById(R.id.button_squareroot),
+                findViewById(R.id.button_powerofn),
+                findViewById(R.id.button_square),
+                findViewById(R.id.button_logarithmic),
+                findViewById(R.id.button_exponents),
+                findViewById(R.id.button_reciprocal),
+                findViewById(R.id.button_rootsofn)
+        };
 
-    private void handleOperator(String operator) {
-        if (!currentInput.isEmpty()) {
-            currentOperator = operator;
-            result = Double.parseDouble(currentInput);
-            currentInput = "";
+        for (Button button : buttons) {
+            setButtonClickListener(button);
         }
     }
 
-    private void calculateResult() {
+    private void setButtonClickListener(Button button) {
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                handleButtonClick(button.getText().toString());
+            }
+        });
+    }
+
+    private void handleButtonClick(String buttonValue) {
+        if (isNumber(buttonValue)) {
+            currentInput += buttonValue;
+        } else if (isOperator(buttonValue)) {
+            performOperation();
+            operator = buttonValue;
+        } else if (buttonValue.equals("=")) {
+            performOperation();
+            operator = "";
+        }
+
+        updateResultTextView();
+    }
+
+    private void performOperation() {
         if (!currentInput.isEmpty()) {
-            double secondOperand = Double.parseDouble(currentInput);
-            switch (currentOperator) {
+            double input = Double.parseDouble(currentInput);
+            switch (operator) {
                 case "+":
-                    result += secondOperand;
+                    firstOperand += input;
                     break;
                 case "-":
-                    result -= secondOperand;
+                    firstOperand -= input;
                     break;
                 case "*":
-                    result *= secondOperand;
+                    firstOperand *= input;
                     break;
                 case "/":
-                    if (secondOperand != 0) {
-                        result /= secondOperand;
+                    if (input != 0) {
+                        firstOperand /= input;
                     } else {
                         // Handle division by zero error
-                        resultTextView.setText("Error");
-                        return;
                     }
                     break;
+                // Add cases for other operators
             }
-            resultTextView.setText(String.valueOf(result));
-            currentInput = "";
+            currentInput = Double.toString(firstOperand);
         }
     }
 
-    private void clearInput() {
-        resultTextView.setText("0");
-        currentInput = "";
-        currentOperator = "";
-        result = 0.0;
+    private void updateResultTextView() {
+        resultTextView.setText(currentInput);
     }
 
+    private boolean isNumber(String value) {
+        return value.matches("\\d") || value.equals(".");
+    }
+
+    private boolean isOperator(String value) {
+        return "+-*/".contains(value);
+    }
 }

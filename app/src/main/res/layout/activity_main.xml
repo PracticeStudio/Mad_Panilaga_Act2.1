@@ -1,29 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical">
+
 
     <TextView
+        android:id="@+id/result"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:text="0"
-        android:textSize="60sp"
-        android:id="@+id/result"/>
-
+        android:padding="10dp"
+        android:text="@string/zero"
+        android:textAlignment="viewEnd"
+        android:textSize="60sp" />
 
     <LinearLayout
+        android:id="@+id/buttons_firstrow"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/buttons_firstrow"
-        android:orientation="horizontal"
-        android:layout_gravity="center_horizontal"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:background="@color/gray">
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/gray"
+        android:orientation="horizontal"
+        tools:ignore="ObsoleteLayoutParam">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_O"
@@ -32,7 +35,7 @@
             android:layout_height="75dp"
             android:layout_margin="13dp"
             android:backgroundTint="@color/yellow_green"
-            android:text="O"
+            android:text="@string/O"
             android:textColor="@color/white"
             android:textSize="30sp"
             app:cornerRadius="35dp" />
@@ -54,7 +57,7 @@
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_margin="13dp"
-            android:text=")"
+            android:text="@string/closebracket"
             android:textColor="@color/white"
             android:textSize="30sp"
             app:cornerRadius="35dp" />
@@ -66,19 +69,19 @@
             android:layout_height="75dp"
             android:layout_margin="13dp"
             android:backgroundTint="@color/orange_red"
-            android:text="/"
+            android:text="@string/divide"
             android:textColor="@color/white"
             android:textSize="30sp"
             app:cornerRadius="35dp" />
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/buttons_secondrow"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/buttons_secondrow"
-        android:orientation="horizontal"
         android:layout_gravity="center_horizontal"
-        android:background="@color/gray">
+        android:background="@color/gray"
+        android:orientation="horizontal">
 
 
         <com.google.android.material.button.MaterialButton
@@ -87,7 +90,7 @@
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_margin="13dp"
-            android:text="7"
+            android:text="@string/seven"
             android:textColor="@color/white"
             android:textSize="30sp"
             app:cornerRadius="35dp" />
@@ -98,7 +101,7 @@
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_margin="13dp"
-            android:text="8"
+            android:text="@string/eight"
             android:textColor="@color/white"
             android:textSize="30sp"
             app:cornerRadius="35dp" />
@@ -109,7 +112,7 @@
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_margin="13dp"
-            android:text="9"
+            android:text="@string/nine"
             android:textColor="@color/white"
             android:textSize="30sp"
             app:cornerRadius="35dp" />
@@ -121,19 +124,19 @@
             android:layout_height="75dp"
             android:layout_margin="13dp"
             android:backgroundTint="@color/orange_red"
-            android:text="*"
+            android:text="@string/multiply"
             android:textColor="@color/white"
             android:textSize="30sp"
             app:cornerRadius="35dp" />
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/buttons_thirdrow"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/buttons_thirdrow"
-        android:orientation="horizontal"
         android:layout_gravity="center_horizontal"
-        android:background="@color/gray">
+        android:background="@color/gray"
+        android:orientation="horizontal">
 
 
         <com.google.android.material.button.MaterialButton
@@ -142,7 +145,7 @@
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_margin="13dp"
-            android:text="4"
+            android:text="@string/four"
             android:textColor="@color/white"
             android:textSize="30sp"
             app:cornerRadius="35dp" />
@@ -153,7 +156,7 @@
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_margin="13dp"
-            android:text="5"
+            android:text="@string/five"
             android:textColor="@color/white"
             android:textSize="30sp"
             app:cornerRadius="35dp" />
@@ -164,7 +167,7 @@
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_margin="13dp"
-            android:text="6"
+            android:text="@string/six"
             android:textColor="@color/white"
             android:textSize="30sp"
             app:cornerRadius="35dp" />
@@ -176,19 +179,19 @@
             android:layout_height="75dp"
             android:layout_margin="13dp"
             android:backgroundTint="@color/orange_red"
-            android:text="+"
+            android:text="@string/add"
             android:textColor="@color/white"
             android:textSize="30sp"
             app:cornerRadius="35dp" />
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/buttons_fourthrow"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/buttons_fourthrow"
-        android:orientation="horizontal"
         android:layout_gravity="center_horizontal"
-        android:background="@color/gray">
+        android:background="@color/gray"
+        android:orientation="horizontal">
 
 
         <com.google.android.material.button.MaterialButton
@@ -197,7 +200,7 @@
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_margin="13dp"
-            android:text="1"
+            android:text="@string/one"
             android:textColor="@color/white"
             android:textSize="30sp"
             app:cornerRadius="35dp" />
@@ -208,7 +211,7 @@
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_margin="13dp"
-            android:text="2"
+            android:text="@string/two"
             android:textColor="@color/white"
             android:textSize="30sp"
             app:cornerRadius="35dp" />
@@ -219,7 +222,7 @@
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_margin="13dp"
-            android:text="3"
+            android:text="@string/three"
             android:textColor="@color/white"
             android:textSize="30sp"
             app:cornerRadius="35dp" />
@@ -231,19 +234,19 @@
             android:layout_height="75dp"
             android:layout_margin="13dp"
             android:backgroundTint="@color/orange_red"
-            android:text="*"
+            android:text="@string/minus"
             android:textColor="@color/white"
             android:textSize="30sp"
             app:cornerRadius="35dp" />
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/buttons_fifthrow"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/buttons_fifthrow"
-        android:orientation="horizontal"
         android:layout_gravity="center_horizontal"
-        android:background="@color/gray">
+        android:background="@color/gray"
+        android:orientation="horizontal">
 
 
         <com.google.android.material.button.MaterialButton
@@ -252,9 +255,9 @@
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_margin="13dp"
-            android:text="C"
-            android:textColor="@color/white"
             android:backgroundTint="@color/coral"
+            android:text="@string/ac"
+            android:textColor="@color/white"
             android:textSize="30sp"
             app:cornerRadius="35dp" />
 
@@ -275,7 +278,7 @@
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_margin="13dp"
-            android:text="."
+            android:text="@string/dot"
             android:textColor="@color/white"
             android:textSize="30sp"
             app:cornerRadius="35dp" />
@@ -287,19 +290,19 @@
             android:layout_height="75dp"
             android:layout_margin="13dp"
             android:backgroundTint="@color/orange_red"
-            android:text="="
+            android:text="@string/equals"
             android:textColor="@color/white"
             android:textSize="30sp"
             app:cornerRadius="35dp" />
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/buttons_sixthrow"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/buttons_sixthrow"
-        android:orientation="horizontal"
         android:layout_gravity="center_horizontal"
-        android:background="@color/gray">
+        android:background="@color/gray"
+        android:orientation="horizontal">
 
 
         <com.google.android.material.button.MaterialButton
@@ -308,9 +311,9 @@
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_margin="13dp"
-            android:text="%"
-            android:textColor="@color/white"
             android:backgroundTint="@color/coral"
+            android:text="@string/mod"
+            android:textColor="@color/white"
             android:textSize="30sp"
             app:cornerRadius="35dp" />
 
@@ -320,11 +323,11 @@
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_margin="13dp"
+            android:backgroundTint="@color/orange_red"
             android:text="-"
             android:textColor="@color/white"
             android:textSize="30sp"
-            app:cornerRadius="35dp"
-            android:backgroundTint="@color/orange_red"/>
+            app:cornerRadius="35dp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_squareroot"
@@ -332,11 +335,11 @@
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_margin="13dp"
-            android:text="√"
+            android:text="@string/squareroot"
             android:textColor="@color/white"
             android:textSize="30sp"
-            app:cornerRadius="35dp"
-            app:backgroundTint="@color/orange_red"/>
+            app:backgroundTint="@color/orange_red"
+            app:cornerRadius="35dp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_powerofn"
@@ -345,19 +348,19 @@
             android:layout_height="75dp"
             android:layout_margin="13dp"
             android:backgroundTint="@color/orange_red"
-            android:text="^"
+            android:text="@string/powerofn"
             android:textColor="@color/white"
             android:textSize="30sp"
             app:cornerRadius="35dp" />
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/buttons_seventhrow"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/buttons_seventhrow"
-        android:orientation="horizontal"
         android:layout_gravity="center_horizontal"
-        android:background="@color/gray">
+        android:background="@color/gray"
+        android:orientation="horizontal">
 
 
         <com.google.android.material.button.MaterialButton
@@ -367,7 +370,7 @@
             android:layout_height="75dp"
             android:layout_margin="13dp"
             android:backgroundTint="@color/coral"
-            android:text="x²"
+            android:text="@string/square"
             android:textColor="@color/white"
             android:textSize="18sp"
             app:backgroundTint="@color/orange_red"
@@ -379,10 +382,10 @@
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_margin="13dp"
-            android:text="log"
-            app:backgroundTint="@color/orange_red"
+            android:text="@string/logarithmic"
             android:textColor="@color/white"
             android:textSize="15sp"
+            app:backgroundTint="@color/orange_red"
             app:cornerRadius="35dp" />
 
         <com.google.android.material.button.MaterialButton
@@ -392,7 +395,7 @@
             android:layout_height="75dp"
             android:layout_margin="13dp"
             android:backgroundTint="@color/orange_red"
-            android:text="e^x"
+            android:text="@string/exponents"
             android:textColor="@color/white"
             android:textSize="15sp"
             app:cornerRadius="35dp" />
@@ -404,7 +407,7 @@
             android:layout_height="75dp"
             android:layout_margin="13dp"
             android:backgroundTint="@color/orange_red"
-            android:text="1/x"
+            android:text="@string/reciprocal"
             android:textColor="@color/white"
             android:textSize="15sp"
             app:cornerRadius="35dp" />
@@ -415,9 +418,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:background="@color/gray"
         android:gravity="center"
-        android:orientation="horizontal"
-        android:background="@color/gray">
+        android:orientation="horizontal">
 
 
         <com.google.android.material.button.MaterialButton
@@ -430,7 +433,7 @@
             android:layout_marginEnd="13dp"
             android:layout_marginBottom="13dp"
             android:backgroundTint="@color/orange_red"
-            android:text="∛"
+            android:text="@string/rootfn"
             android:textColor="@color/white"
             android:textSize="25sp"
             app:cornerRadius="35dp" />
