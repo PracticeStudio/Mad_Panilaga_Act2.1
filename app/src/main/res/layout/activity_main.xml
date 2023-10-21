@@ -38,7 +38,8 @@
             android:text="@string/O"
             android:textColor="@color/white"
             android:textSize="30sp"
-            app:cornerRadius="35dp" />
+            app:cornerRadius="35dp"
+            android:onClick="onButtonClick"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_openbracket"
@@ -49,7 +50,8 @@
             android:text="("
             android:textColor="@color/white"
             android:textSize="30sp"
-            app:cornerRadius="35dp" />
+            app:cornerRadius="35dp"
+            android:onClick="onButtonClick"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_closebracket"
@@ -60,7 +62,8 @@
             android:text="@string/closebracket"
             android:textColor="@color/white"
             android:textSize="30sp"
-            app:cornerRadius="35dp" />
+            app:cornerRadius="35dp"
+            android:onClick="onButtonClick"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_divide"
@@ -72,7 +75,8 @@
             android:text="@string/divide"
             android:textColor="@color/white"
             android:textSize="30sp"
-            app:cornerRadius="35dp" />
+            app:cornerRadius="35dp"
+            android:onClick="onButtonClick"/>
     </LinearLayout>
 
     <LinearLayout
@@ -93,7 +97,8 @@
             android:text="@string/seven"
             android:textColor="@color/white"
             android:textSize="30sp"
-            app:cornerRadius="35dp" />
+            app:cornerRadius="35dp"
+            android:onClick="onButtonClick"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_eight"
@@ -115,7 +120,8 @@
             android:text="@string/nine"
             android:textColor="@color/white"
             android:textSize="30sp"
-            app:cornerRadius="35dp" />
+            app:cornerRadius="35dp"
+            android:onClick="onButtonClick"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_multiply"
@@ -127,7 +133,8 @@
             android:text="@string/multiply"
             android:textColor="@color/white"
             android:textSize="30sp"
-            app:cornerRadius="35dp" />
+            app:cornerRadius="35dp"
+            android:onClick="onButtonClick"/>
     </LinearLayout>
 
     <LinearLayout
@@ -148,7 +155,8 @@
             android:text="@string/four"
             android:textColor="@color/white"
             android:textSize="30sp"
-            app:cornerRadius="35dp" />
+            app:cornerRadius="35dp"
+            android:onClick="onButtonClick"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_five"
@@ -159,7 +167,8 @@
             android:text="@string/five"
             android:textColor="@color/white"
             android:textSize="30sp"
-            app:cornerRadius="35dp" />
+            app:cornerRadius="35dp"
+            android:onClick="onButtonClick"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_six"
@@ -170,7 +179,8 @@
             android:text="@string/six"
             android:textColor="@color/white"
             android:textSize="30sp"
-            app:cornerRadius="35dp" />
+            app:cornerRadius="35dp"
+            android:onClick="onButtonClick"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_addition"
@@ -182,7 +192,8 @@
             android:text="@string/add"
             android:textColor="@color/white"
             android:textSize="30sp"
-            app:cornerRadius="35dp" />
+            app:cornerRadius="35dp"
+            android:onClick="onButtonClick"/>
     </LinearLayout>
 
     <LinearLayout
@@ -203,7 +214,8 @@
             android:text="@string/one"
             android:textColor="@color/white"
             android:textSize="30sp"
-            app:cornerRadius="35dp" />
+            app:cornerRadius="35dp"
+            android:onClick="onButtonClick"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_two"
@@ -214,7 +226,8 @@
             android:text="@string/two"
             android:textColor="@color/white"
             android:textSize="30sp"
-            app:cornerRadius="35dp" />
+            app:cornerRadius="35dp"
+            android:onClick="onButtonClick"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_three"
@@ -225,7 +238,8 @@
             android:text="@string/three"
             android:textColor="@color/white"
             android:textSize="30sp"
-            app:cornerRadius="35dp" />
+            app:cornerRadius="35dp"
+            android:onClick="onButtonClick"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_minus"
@@ -237,7 +251,8 @@
             android:text="@string/minus"
             android:textColor="@color/white"
             android:textSize="30sp"
-            app:cornerRadius="35dp" />
+            app:cornerRadius="35dp"
+            android:onClick="onButtonClick"/>
     </LinearLayout>
 
     <LinearLayout
@@ -259,7 +274,8 @@
             android:text="@string/ac"
             android:textColor="@color/white"
             android:textSize="30sp"
-            app:cornerRadius="35dp" />
+            app:cornerRadius="35dp"
+            android:onClick="onButtonClick"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_zero"
@@ -270,7 +286,8 @@
             android:text="0"
             android:textColor="@color/white"
             android:textSize="30sp"
-            app:cornerRadius="35dp" />
+            app:cornerRadius="35dp"
+            android:onClick="onButtonClick"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_dot"
@@ -281,7 +298,8 @@
             android:text="@string/dot"
             android:textColor="@color/white"
             android:textSize="30sp"
-            app:cornerRadius="35dp" />
+            app:cornerRadius="35dp"
+            android:onClick="onButtonClick"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_equals"
@@ -293,7 +311,8 @@
             android:text="@string/equals"
             android:textColor="@color/white"
             android:textSize="30sp"
-            app:cornerRadius="35dp" />
+            app:cornerRadius="35dp"
+            android:onClick="onButtonClick"/>
     </LinearLayout>
 
     <LinearLayout
@@ -315,7 +334,8 @@
             android:text="@string/mod"
             android:textColor="@color/white"
             android:textSize="30sp"
-            app:cornerRadius="35dp" />
+            app:cornerRadius="35dp"
+            android:onClick="onButtonClick"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_negative"
@@ -327,7 +347,8 @@
             android:text="-"
             android:textColor="@color/white"
             android:textSize="30sp"
-            app:cornerRadius="35dp" />
+            app:cornerRadius="35dp"
+            android:onClick="onButtonClick"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_squareroot"
@@ -339,7 +360,8 @@
             android:textColor="@color/white"
             android:textSize="30sp"
             app:backgroundTint="@color/orange_red"
-            app:cornerRadius="35dp" />
+            app:cornerRadius="35dp"
+            android:onClick="onButtonClick"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_powerofn"
@@ -351,7 +373,8 @@
             android:text="@string/powerofn"
             android:textColor="@color/white"
             android:textSize="30sp"
-            app:cornerRadius="35dp" />
+            app:cornerRadius="35dp"
+            android:onClick="onButtonClick"/>
     </LinearLayout>
 
     <LinearLayout
@@ -374,7 +397,8 @@
             android:textColor="@color/white"
             android:textSize="18sp"
             app:backgroundTint="@color/orange_red"
-            app:cornerRadius="35dp" />
+            app:cornerRadius="35dp"
+            android:onClick="onButtonClick"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_logarithmic"
@@ -386,7 +410,8 @@
             android:textColor="@color/white"
             android:textSize="15sp"
             app:backgroundTint="@color/orange_red"
-            app:cornerRadius="35dp" />
+            app:cornerRadius="35dp"
+            android:onClick="onButtonClick"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_exponents"
@@ -398,7 +423,8 @@
             android:text="@string/exponents"
             android:textColor="@color/white"
             android:textSize="15sp"
-            app:cornerRadius="35dp" />
+            app:cornerRadius="35dp"
+            android:onClick="onButtonClick"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_reciprocal"
@@ -410,7 +436,8 @@
             android:text="@string/reciprocal"
             android:textColor="@color/white"
             android:textSize="15sp"
-            app:cornerRadius="35dp" />
+            app:cornerRadius="35dp"
+            android:onClick="onButtonClick"/>
     </LinearLayout>
 
     <RelativeLayout
@@ -436,7 +463,8 @@
             android:text="@string/rootfn"
             android:textColor="@color/white"
             android:textSize="25sp"
-            app:cornerRadius="35dp" />
+            app:cornerRadius="35dp"
+            android:onClick="onButtonClick"/>
 
     </RelativeLayout>
 
