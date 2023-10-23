@@ -8,9 +8,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
     private TextView resultTextView;
-    private String currentInput = ""; // Store the current input
-    private double firstOperand = 0; // Store the first operand
-    private String operator = ""; // Store the current operator
+    private String currentInput = ""; 
+    private double firstOperand = 0; // 
+    private String operator = ""; // 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
